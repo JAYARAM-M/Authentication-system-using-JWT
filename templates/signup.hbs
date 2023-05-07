@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            body {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+form:hover {
+  transform: rotateX(20deg) rotateY(-10deg);
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sub {
+  background-color: #3a75c4;
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  text-decoration: none;
+}
+
+        </style>
+</head>
+<body>
+    <div class="title">Sign Up</div>
+     <div class="container">
+    <form action="/signup" method="post" >
+    <input placeholder="Name" name="name" type="text">
+    <br>
+    <input type="email" name="email" placeholder="Enter your email">
+    <br>
+    <input placeholder="Password" name="password" type="password">
+    <br>
+    <input class="sub" type="submit" value="Register">
+    <div class="button-group">
+    <a class="btn btn-secondary" href="/">Go back Login</a>
+    </div>
+    </form>
+</div>
+
+</body>
+</html>
